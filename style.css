@@ -21,8 +21,8 @@ main .contenido-principal div .boton {
 main .contenido-secundario {
   background-color: var(--color-secundario);
   height: 100vh;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 main .contenido-secundario .padre {
   height: 80vh;
