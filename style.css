@@ -1,0 +1,45 @@
+:root {
+  --color-principal: #90a081;
+  --color-secundario: #f1ac7b;
+  --color-boton: #ffc107;
+  --color-consola: #000;
+}
+main .contenido-principal {
+  background-color: var(--color-principal);
+  height: 100vh;
+  padding-top: 20px;
+}
+main .contenido-principal span {
+  padding-bottom: 40px;
+}
+main .contenido-principal div .boton {
+  background-color: var(--color-boton);
+  border-radius: 10px;
+  border-color: var(--color-boton);
+  padding: 7px;
+}
+main .contenido-secundario {
+  background-color: var(--color-secundario);
+  height: 100vh;
+  padding-top: 20px;
+}
+main .contenido-secundario div div{
+  padding-bottom: 80vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 80vh;
+}
+main .contenido-secundario div .consola {
+  background-color: var(--color-consola);
+  height: 100%;
+}
+
+main .contenido-secundario scroll-container {
+  display: block;
+  width: inherit;
+  height: 80px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
