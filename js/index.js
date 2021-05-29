@@ -1,13 +1,9 @@
-const equiposMayoresEdad = equipo.filter(
-  (
-    {
-      asignado: {
-        empleado: { edad },
-      },
-    },
-    edadMinima
-  ) => edad > edadMinima
-);
+const equiposMayoresEdad = (equip, edadMinima) => {
+  const equipoAsignadosMayoresEdad = equip.filter(
+    ({ asignado: { empleado: edad } }) => edad > edadMinima
+  );
+  return equiposMayoresEdad;
+};
 
 const equiposProvincia = equipos.filter(
   (equipo, provincia) => equipo.asignado.provincia === provincia
@@ -30,3 +26,5 @@ const edadMedia = equipos.reduce(
   ) => acumulador + edad / equipos.length,
   0
 );
+
+const trabajadoresTipo = (equipos) => console.log("no");
