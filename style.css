@@ -22,22 +22,25 @@ main .contenido-secundario {
   background-color: var(--color-secundario);
   height: 100vh;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
-main .contenido-secundario div div{
-  padding-bottom: 80vh;
-  padding-left: 15px;
-  padding-right: 15px;
+main .contenido-secundario .padre {
   height: 80vh;
+}
+main .contenido-secundario .padre1 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 main .contenido-secundario div .consola {
   background-color: var(--color-consola);
   height: 100%;
+  border-radius: 5px;
 }
 
-main .contenido-secundario scroll-container {
+main .contenido-secundario .scroll-container {
   display: block;
   width: inherit;
-  height: 80px;
+  height: 500px;
   overflow-y: scroll;
   scroll-behavior: smooth;
   margin: 0 auto;
