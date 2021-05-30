@@ -54,6 +54,23 @@ const equiposPorEdad = (equipos) =>
       equiposA.asignado.empleado.edad - equiposB.asignado.empleado.edad
   );
 
+const equiposPorTipo = (equipos) => {
+  const equiposPorTipo = [];
+  const tiposEquipo = equipos
+    .map(({ tipo }) => tipo)
+    .filter((tipo, index, tipos) => tipos.indexOf(tipo) === index);
+  for (const tipoEquipo of tiposEquipo) {
+    const equiposDeUnTipo = { tipo: "", equipos: [] };
+    for (const equipo of equipos) {
+      if (equipo.tipo === tipoEquipo) {
+        equiposDeUnTipo.equipos.push(equipo);
+      }
+    }
+    equiposDeUnTipo.tipo = tipoEquipo;
+    equiposPorTipo.push(equiposDeUnTipo);
+  }
+  return equiposPorTipo;
+};
 const equiposTipoLocalidad = (equipos, tipo1, localidad1) =>
   equipos.filter(
     ((team) => team.tipo.toLowerCase() === tipo1.toLowerCase()) &&
