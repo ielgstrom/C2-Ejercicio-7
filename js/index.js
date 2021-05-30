@@ -54,9 +54,16 @@ const equiposPorEdad = (equipos) =>
       equiposA.asignado.empleado.edad - equiposB.asignado.empleado.edad
   );
 
+
 const resumenEquipos = (equipos) =>
   equipos.map(
     ({
-      id, asignado: { poblacion }, asignado: { provincia },
-    }) => resumenEquipos
+      id,
+    }) => id,
+    ({
+      asignado: { poblacion },
+    }) => poblacion,
+    ({
+      asignado: { provincia },
+    }) => provincia,
   );
