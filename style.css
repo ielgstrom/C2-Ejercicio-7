@@ -42,9 +42,6 @@ main .contenido-secundario .padre1 .padre2 .consola {
   overflow-y: scroll;
   scroll-behavior: smooth;
   background-color: var(--color-consola);
-
-}
-
-main .contenido-secundario .padre1 .padre2 .consola .letras {
   color: var(--color-letracons);
 }
+
