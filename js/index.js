@@ -32,3 +32,24 @@ const puestos = (equipos) =>
       },
     }) => puesto
   );
+
+const edadMedia = (equipos) =>
+  equipos.reduce(
+    (
+      totalEdad,
+      {
+        asignado: {
+          empleado: { edad },
+        },
+      },
+      i,
+      empleados
+    ) => totalEdad + edad / empleados.length,
+    0
+  );
+
+const equiposPorEdad = (equipos) =>
+  equipos.sort(
+    (equiposA, equiposB) =>
+      equiposA.asignado.empleado.edad - equiposB.asignado.empleado.edad
+  );
