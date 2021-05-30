@@ -54,16 +54,16 @@ const equiposPorEdad = (equipos) =>
       equiposA.asignado.empleado.edad - equiposB.asignado.empleado.edad
   );
 
+const equiposTipoLocalidad = (equipos, tipo1, localidad1) =>
+  equipos.filter(
+    ((team) => team.tipo.toLowerCase() === tipo1.toLowerCase()) &&
+      ((team) =>
+        team.asignado.poblacion.toLowerCase() === localidad1.toLowerCase())
+  );
 
 const resumenEquipos = (equipos) =>
   equipos.map(
-    ({
-      id,
-    }) => id,
-    ({
-      asignado: { poblacion },
-    }) => poblacion,
-    ({
-      asignado: { provincia },
-    }) => provincia,
+    ({ id }) => id,
+    ({ asignado: { poblacion } }) => poblacion,
+    ({ asignado: { provincia } }) => provincia
   );
