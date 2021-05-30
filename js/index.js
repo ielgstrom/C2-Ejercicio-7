@@ -16,3 +16,19 @@ const equiposProvincia = (equipos, provinciaGeneral) => {
   );
   return equiposDeProvincias;
 };
+
+const provincias = (equipos) =>
+  equipos
+    .map(({ asignado: { provincia } }) => provincia)
+    .filter(
+      (provincia, index, provincias) => provincias.indexOf(provincia) === index
+    );
+
+const puestos = (equipos) =>
+  equipos.map(
+    ({
+      asignado: {
+        empleado: { puesto },
+      },
+    }) => puesto
+  );
