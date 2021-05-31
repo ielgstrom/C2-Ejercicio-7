@@ -39,9 +39,11 @@ main .contenido-secundario .padre1 .padre2 .consola {
   display: block;
   height: 100%;
   width: inherit;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  overflow-y: auto;
   background-color: var(--color-consola);
   color: var(--color-letracons);
 }
-
+.consola pre {
+  color: var(--color-letracons);
+  font-size: 10px;
+}

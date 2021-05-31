@@ -84,3 +84,4 @@ const resumenEquipos = (equipos) =>
     ({ asignado: { poblacion } }) => poblacion,
     ({ asignado: { provincia } }) => provincia
   );
+
