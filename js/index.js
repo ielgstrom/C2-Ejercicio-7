@@ -56,14 +56,26 @@ const equiposPorEdad = (equipos) =>
 
 
 const resumenEquipos = (equipos) =>
-  equipos.map(
+  equipos
+    .map(
+      ({
+        id,
+      }) => id,
+  .
+
     ({
-      id,
-    }) => id,
-    ({
-      asignado: { poblacion },
-    }) => poblacion,
-    ({
-      asignado: { provincia },
-    }) => provincia,
+        asignado: { poblacion },
+      }) => poblacion,
+
+
+        ({
+          asignado: { provincia },
+        }) => provincia,
   );
+
+/*
+const equiposTipo = (equipos, especifico) =>
+equipos.filter(
+  ({ equiposTipo => { especifico === tipo }, }) => equiposTipo,
+); 3
+ */
