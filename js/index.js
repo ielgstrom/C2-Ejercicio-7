@@ -58,6 +58,11 @@ const equiposTipo = (equipos, tipoEquipo) =>
   equipos.filter(({ tipo }) => tipo.toLowerCase() === tipoEquipo.toLowerCase()
   );
 
+const trabajadoresTipo = (equipos, tipoEquipo) =>
+  equipos
+    .filter(({ tipo }) => tipo.toLowerCase() === tipoEquipo.toLowerCase())
+    .map(({ asignado: { empleado } }) => empleado);
+
 const equiposPorTipo = (equipos) => {
   const equiposPorTipo = [];
   const tiposEquipo = equipos
