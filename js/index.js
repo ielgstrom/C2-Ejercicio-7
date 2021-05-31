@@ -54,6 +54,10 @@ const equiposPorEdad = (equipos) =>
       equiposA.asignado.empleado.edad - equiposB.asignado.empleado.edad
   );
 
+const equiposTipo = (equipos, tipoEquipo) =>
+  equipos.filter(({ tipo }) => tipo.toLowerCase() === tipoEquipo.toLowerCase()
+  );
+
 const equiposPorTipo = (equipos) => {
   const equiposPorTipo = [];
   const tiposEquipo = equipos
@@ -74,8 +78,8 @@ const equiposPorTipo = (equipos) => {
 const equiposTipoLocalidad = (equipos, tipo1, localidad1) =>
   equipos.filter(
     ((team) => team.tipo.toLowerCase() === tipo1.toLowerCase()) &&
-      ((team) =>
-        team.asignado.poblacion.toLowerCase() === localidad1.toLowerCase())
+    ((team) =>
+      team.asignado.poblacion.toLowerCase() === localidad1.toLowerCase())
   );
 
 const resumenEquipos = (equipos) =>
